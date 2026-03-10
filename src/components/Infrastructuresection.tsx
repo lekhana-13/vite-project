@@ -83,7 +83,7 @@ export default function Infrastructure() {
         "
       >
         <img
-          src="./mockup 1.png"
+          src="./mockup1.png"
           alt="dashboard mockup"
           className="w-full object-contain"
         />
