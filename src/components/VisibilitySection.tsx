@@ -53,7 +53,7 @@ export default function VisibilitySection() {
 
           {/* CARD 2 */}
           <div className="w-full max-w-[387px] min-h-[332px] bg-[#131814] rounded-[24px] border border-[#283E00] flex flex-col items-center p-8 text-center hover:border-[#77B900] transition-colors group">
-            <img src="/shared-icon.png" className="w-[64px] h-[64px] mb-[24px] group-hover:scale-110 transition-transform" />
+            <img src="./container.png" className="w-[64px] h-[64px] mb-[24px] group-hover:scale-110 transition-transform" />
             <h3 className="text-white text-[20px] font-semibold mb-[16px]">
               Handle Complex Shared Resources
             </h3>
@@ -67,7 +67,7 @@ export default function VisibilitySection() {
 
           {/* CARD 3 */}
           <div className="w-full max-w-[386px] min-h-[332px] bg-[#131814] rounded-[24px] border border-[#283E00] flex flex-col items-center p-8 text-center hover:border-[#77B900] transition-colors group">
-            <img src="/cloud.png" className="w-[59px] h-[46px] mb-[24px] group-hover:scale-110 transition-transform" />
+            <img src="./cloud.png" className="w-[59px] h-[46px] mb-[24px] group-hover:scale-110 transition-transform" />
             <h3 className="text-white text-[22px] font-semibold mb-[16px]">
               Unify Multi-Cloud Cost Data
             </h3>
@@ -81,7 +81,7 @@ export default function VisibilitySection() {
 
           {/* CARD 4 */}
           <div className="w-full max-w-[386px] min-h-[332px] bg-[#131814] rounded-[24px] border border-[#283E00] flex flex-col items-center p-8 text-center hover:border-[#77B900] transition-colors group">
-            <img src="/pie-chart.svg" className="w-[40px] h-[40px] mb-[24px] group-hover:scale-110 transition-transform" />
+            <img src="./pie-chart.png" className="w-[40px] h-[40px] mb-[24px] group-hover:scale-110 transition-transform" />
             <h3 className="text-white text-[22px] font-semibold mb-[18px]">
               Govern Before you Spend
             </h3>
@@ -94,7 +94,7 @@ export default function VisibilitySection() {
 
           {/* CARD 5 */}
           <div className="w-full max-w-[387px] min-h-[332px] bg-[#131814] rounded-[24px] border border-[#283E00] flex flex-col items-center p-8 text-center hover:border-[#77B900] transition-colors group">
-            <img src="/settings.svg" className="w-[60px] h-[50px] mb-[24px] group-hover:scale-110 transition-transform" />
+            <img src="./settings.png" className="w-[60px] h-[50px] mb-[24px] group-hover:scale-110 transition-transform" />
             <h3 className="text-white text-[20px] font-semibold mb-[18px]">
               Integrate into Existing Workflows
             </h3>
@@ -106,7 +106,7 @@ export default function VisibilitySection() {
 
           {/* CARD 6 */}
           <div className="w-full max-w-[386px] min-h-[332px] bg-[#131814] rounded-[24px] border border-[#283E00] flex flex-col items-center p-8 text-center hover:border-[#77B900] transition-colors group">
-            <img src="/graph.svg" className="w-[60px] h-[50px] mb-[24px] group-hover:scale-110 transition-transform" />
+            <img src="./graph.png" className="w-[60px] h-[50px] mb-[24px] group-hover:scale-110 transition-transform" />
             <h3 className="text-white text-[22px] font-semibold mb-[18px]">
               Deploy in Days, not Months
             </h3>

@@ -41,8 +41,8 @@ export default function DemoSection() {
 
           {/* GLOW IMAGE */}
           <img
-            src="/form-glow.png"
-            alt="form glow"
+            src="./Group 61.png"
+            alt="glow"
             className="absolute -inset-10 w-[600px] opacity-40 pointer-events-none -z-10"
           />
 
