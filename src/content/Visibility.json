@@ -9,7 +9,7 @@
       "description": "Monitor the cost of every model call, agent interaction, and GPU hour while enabling detailed visibility for precise chargeback allocation."
     },
     {
-      "icon": "/shared-icon.png",
+      "icon": "/container.png",
       "title": "Handle Complex Shared Resources",
       "description": "Allocate costs across Kubernetes clusters, shared databases, and multi-tenant infrastructure effortlessly with KoreValue’s intelligent allocation engine."
     },
@@ -19,17 +19,17 @@
       "description": "Move beyond scattered reports from AWS, Azure, GCP and on-prem with a unified platform that standardizes cost data across environments."
     },
     {
-      "icon": "/pie-chart.svg",
+      "icon": "/pie-chart.png",
       "title": "Govern Before you Spend",
       "description": "Implement budget protections to stop unapproved resource creation before it impacts your billing."
     },
     {
-      "icon": "/settings.svg",
+      "icon": "/settings.png",
       "title": "Integrate into Existing Workflows",
       "description": "Built on an API-first model, it integrates with ERP, ITSM, and BI platforms."
     },
     {
-      "icon": "/graph.svg",
+      "icon": "/graph.png",
       "title": "Deploy in Days, not Months",
       "description": "Integrated discovery automation and virtual tagging start working right away."
     }
