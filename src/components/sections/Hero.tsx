@@ -1,7 +1,8 @@
 
-import hero from "../../content/Hero.json";
+import content from "../../content/combined.json";
 
 export default function Hero() {
+  const hero = content.Hero;
   return (
     <section className="relative w-full min-h-[900px] lg:min-h-[1200px] overflow-hidden">
 

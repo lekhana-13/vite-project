@@ -1,5 +1,5 @@
 import VisibilityCard from "../ui/VisibilityCard"
-import visibility from "../../content/Visibility.json"
+import content from "../../content/combined.json"
 
 type Card = {
   icon: string
@@ -8,6 +8,8 @@ type Card = {
 }
 
 export default function VisibilitySection() {
+  const visibility = content.Visibility
+
   return (
     <section
       className="

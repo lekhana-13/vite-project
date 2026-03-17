@@ -1,7 +1,8 @@
 
-import infrastructure from "../../content/Infrastructure.json";
+import content from "../../content/combined.json";
 
 export default function Infrastructure() {
+  const infrastructure = content.Infrastructure;
   return (
     <section className="w-full overflow-hidden flex justify-center">
 

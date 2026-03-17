@@ -1,9 +1,10 @@
 
 import { useState } from "react"
-import navbar from "../../content/Navbar.json"
+import content from "../../content/combined.json"
 
 const Navbar = () => {
 
+  const navbar = content.Navbar
   const [menuOpen,setMenuOpen] = useState(false)
 
   return (
