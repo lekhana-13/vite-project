@@ -72,6 +72,66 @@
         "description": "Integrated discovery automation and virtual tagging start working right away."
       }
     ]
+  },
+
+  "Services": {
+    "title": "Explore Our Services",
+    "cards": [
+      {
+        "icon": "/cost.png",
+        "title": "Cost Analyzer",
+        "description": "See exactly where every cost is being spent across clouds"
+      },
+      {
+        "icon": "/category.png",
+        "title": "Category Views",
+        "description": "Slice spend by teams, projects, and business categories"
+      },
+      {
+        "icon": "/observability.png",
+        "title": "K8s Cost Observability",
+        "description": "Track Kubernetes spend by namespace, pod, and workload"
+      },
+      {
+        "icon": "/recommendation.png",
+        "title": "Recommendations",
+        "description": "Get actionable suggestions to reduce waste and optimize resources"
+      },
+      {
+        "icon": "/anomaly.png",
+        "title": "Anomaly Detection",
+        "description": "Spot unusual spend patterns before they become budget surprises"
+      },
+      {
+        "icon": "/reporting.png",
+        "title": "Reporting",
+        "description": "Build and schedule cost reports for stakeholders"
+      },
+      {
+        "icon": "/virtual.png",
+        "title": "Virtual Tags",
+        "description": "Tag resources dynamically without changing cloud metadata"
+      },
+      {
+        "icon": "/cost-allocation.png",
+        "title": "Cost Allocation",
+        "description": "Allocate spend to teams, products, and business units"
+      },
+      {
+        "icon": "/unit-economics.png",
+        "title": "Unit Economics",
+        "description": "Understand cost per user, request, and feature usage"
+      },
+      {
+        "icon": "/forecasting.png",
+        "title": "Forecasting",
+        "description": "Predict future spend with historical trends"
+      },
+      {
+        "icon": "/budgeting.png",
+        "title": "Budgeting",
+        "description": "Set spending limits and get alerts when close to thresholds"
+      }
+    ]
   }
 }
-  
