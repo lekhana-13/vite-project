@@ -13,7 +13,7 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
 
-          <ServiceCard emoji="/cost.png" title="Cost Analyzer" description="See exactly where every cost is being spent across clouds" />
+          <ServiceCard icon="/cost.png" title="Cost Analyzer" description="See exactly where every cost is being spent across clouds" />
           <ServiceCard icon="/category.png" title="Category Views" description="Slice spend by teams, projects, and business categories" />
           <ServiceCard icon="/observability.png" title="K8s Cost Observability" description="Track Kubernetes spend by namespace, pod, and workload" />
           <ServiceCard icon="/recommendation.png" title="Recommendations" description="Get actionable suggestions to reduce waste and optimize resources" />
