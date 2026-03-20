@@ -28,6 +28,7 @@
   },
   "Navbar": {
     "menu": [
+      "Home",
       "Resource",
       "Platform",
       "Services"

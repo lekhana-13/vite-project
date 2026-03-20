@@ -6,17 +6,19 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navbar = content.Navbar; // ✅ FIXED
+  const navbar = content.Navbar;
 
-  // Dynamic route mapping
+  // ✅ Updated route mapping
   const getPath = (item: string) => {
     switch (item.toLowerCase()) {
+      case "home":
+        return "/";
       case "services":
         return "/services";
       case "platform":
-        return "/";
-      case "resource":
-        return "/";
+        return "/platform";
+      case "resources":
+        return "/resources";
       default:
         return "/";
     }
@@ -39,7 +41,6 @@ const Navbar = () => {
 
       {/* DESKTOP MENU */}
       <div className="hidden lg:flex items-center gap-12">
-
         {navbar.menu.map((item: string, index: number) => {
           const path = getPath(item);
           const isActive = location.pathname === path;
@@ -69,7 +70,6 @@ const Navbar = () => {
         <button className="w-[176px] h-[48px] rounded-[11px] bg-[#77B900] text-black text-[20px] font-medium flex items-center justify-center shadow-[0_0_23px_rgba(119,185,0,0.65)] hover:bg-[#8fd600] transition">
           {navbar.buttons.login}
         </button>
-
       </div>
 
       {/* MOBILE MENU BUTTON */}
@@ -83,7 +83,6 @@ const Navbar = () => {
       {/* MOBILE MENU */}
       {menuOpen && (
         <div className="fixed top-[90px] left-0 w-full bg-[#0F1800] flex flex-col items-center gap-6 py-8 lg:hidden border-t border-[#436900] z-[150]">
-
           {navbar.menu.map((item: string, index: number) => {
             const path = getPath(item);
 
@@ -106,10 +105,8 @@ const Navbar = () => {
           <button className="w-[160px] h-[44px] bg-[#77B900] text-black rounded-lg">
             {navbar.buttons.login}
           </button>
-
         </div>
       )}
-
     </nav>
   );
 };
