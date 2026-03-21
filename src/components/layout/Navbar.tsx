@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navbar = content.Navbar;
 
-  // ✅ Updated route mapping
+  // ✅ UPDATED ROUTES
   const getPath = (item: string) => {
     switch (item.toLowerCase()) {
       case "home":
@@ -19,6 +19,8 @@ const Navbar = () => {
         return "/platform";
       case "resources":
         return "/resources";
+      case "company":                 // ✅ NEW
+        return "/company";
       default:
         return "/";
     }
@@ -41,6 +43,8 @@ const Navbar = () => {
 
       {/* DESKTOP MENU */}
       <div className="hidden lg:flex items-center gap-12">
+
+        {/* ✅ MENU ITEMS */}
         {navbar.menu.map((item: string, index: number) => {
           const path = getPath(item);
           const isActive = location.pathname === path;
@@ -61,6 +65,19 @@ const Navbar = () => {
           );
         })}
 
+        {/* ✅ COMPANY (FORCED POSITION BEFORE BUTTONS) */}
+        <Link
+          to="/company"
+          className={`text-[20px] font-medium transition cursor-pointer
+          ${
+            location.pathname === "/company"
+              ? "text-[#9fdc00]"
+              : "text-[#77B900] hover:text-[#9fdc00]"
+          }`}
+        >
+          Company
+        </Link>
+
         {/* CONTACT BUTTON */}
         <button className="w-[176px] h-[48px] rounded-[11px] border border-[#436900] bg-[#131814] text-[#77B900] text-[20px] font-medium flex items-center justify-center hover:bg-[#1a1f1a] transition">
           {navbar.buttons.contact}
@@ -70,6 +87,7 @@ const Navbar = () => {
         <button className="w-[176px] h-[48px] rounded-[11px] bg-[#77B900] text-black text-[20px] font-medium flex items-center justify-center shadow-[0_0_23px_rgba(119,185,0,0.65)] hover:bg-[#8fd600] transition">
           {navbar.buttons.login}
         </button>
+
       </div>
 
       {/* MOBILE MENU BUTTON */}
@@ -83,6 +101,7 @@ const Navbar = () => {
       {/* MOBILE MENU */}
       {menuOpen && (
         <div className="fixed top-[90px] left-0 w-full bg-[#0F1800] flex flex-col items-center gap-6 py-8 lg:hidden border-t border-[#436900] z-[150]">
+
           {navbar.menu.map((item: string, index: number) => {
             const path = getPath(item);
 
@@ -98,6 +117,15 @@ const Navbar = () => {
             );
           })}
 
+          {/* ✅ COMPANY IN MOBILE */}
+          <Link
+            to="/company"
+            onClick={() => setMenuOpen(false)}
+            className="text-[#77B900] text-lg"
+          >
+            Company
+          </Link>
+
           <button className="w-[160px] h-[44px] border border-[#436900] bg-[#131814] text-[#77B900] rounded-lg">
             {navbar.buttons.contact}
           </button>
@@ -105,8 +133,10 @@ const Navbar = () => {
           <button className="w-[160px] h-[44px] bg-[#77B900] text-black rounded-lg">
             {navbar.buttons.login}
           </button>
+
         </div>
       )}
+
     </nav>
   );
 };

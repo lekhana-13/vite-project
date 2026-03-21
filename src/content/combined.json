@@ -1,46 +1,57 @@
 {
-  "Demo": {
-    "heading": "NO RISK PROOF OF VALUE",
-    "title": "Start controlling your AI and Hybrid Environment Costs.",
-    "description": "Monitor every expense across cloud, on-premise systems, AI and SaaS through a single platform. Avoid unexpected costs with real-time cost distribution, anomaly monitoring and predictive forecasting. Streamline cost management using chargebacks, spending guardrails, and AI-powered insights.",
-    "form": {
-      "title": "Request a Demo",
-      "name": "Name",
-      "email": "E-Mail",
-      "organization": "Organization Name",
-      "source": "How you Know about us?",
-      "submit": "Submit"
-    }
-  },
-  "Footer": {
-    "tagline": "A cost optimization platform designed for managing AI and Hybrid Infrastructure expenses.",
-    "description": "KoreValue is an AI-powered FinOps platform designed to help organizations monitor, analyze, and optimize their cloud spending. With real-time cost intelligence, anomaly detection, and multi-cloud insights, we enable teams to make smarter financial decisions and maximize the value of their cloud infrastructure.",
-    "copyright": "© 2026 KoreValue AI-Powered Cloud Intelligence Platform"
-  },
-  "Hero": {
-    "title": "A Single Solution to Manage AI and Hybrid Infrastructure costs",
-    "description": "Get end-to-end visibility, chargeback, and forecasting across AI, Cloud, SaaS, and on-prem infrastructure to control costs before they grow."
-  },
-  "Infrastructure": {
-    "title": "Clear answers for Complex Infrastructure",
-    "description": "When legacy FinOps tools fail to explain rising usage, margin erosion, and AI costs KoreValue provides the clarity and control for the modern era.",
-    "footerText": "KoreValue centralizes cost data across LLMs, GPUs, SaaS tools, and private and public cloud, enabling smarter spending, stronger margins, and confident scaling."
-  },
   "Navbar": {
-    "menu": [
-      "Home",
-      "Resource",
-      "Platform",
-      "Services"
-    ],
+    "menu": ["Home", "Services", "Platform", "Resources"],
     "buttons": {
       "contact": "Contact Us",
       "login": "Login"
     }
   },
-  "Visibility": {
+
+  "Hero": {
+    "title": "A Single Solution to Manage AI and Hybrid Infrastructure costs",
+    "description": "Get end-to-end visibility, chargeback, and forecasting across AI, Cloud, SaaS, and on-prem infrastructure to control costs before they grow."
+  },
+
+  "Infrastructure": {
+    "cards": [
+      {
+        "title": "FinOps Autopilot",
+        "description": "AI Agents that simplify cloud cost management across stake holders",
+        "cardTop": 100,
+        "titleTop": 200,
+        "descTop": 300,
+        "width": "auto",
+        "descWidth": "684px"
+      },
+      {
+        "title": "Brings clarity and Control to AI Spend",
+        "description": "AI cost can be unpredictable and complex, our AI financial management will be predictable",
+        "cardTop": 600,
+        "titleTop": 650,
+        "descTop": 850,
+        "width": "581px",
+        "descWidth": "653px"
+      },
+      {
+        "title": "Autonomous K8s and GPU Resource Optimization",
+        "description": "The most powerful Agentic Platform for automated resource optimization",
+        "cardTop": 1100,
+        "titleTop": 1150,
+        "descTop": 1350,
+        "width": "827px",
+        "descWidth": "766px"
+      }
+    ]
+  },
+
+  "visibility": {
     "title": "One Platform, End-to-End Visibility",
     "description": "Track and manage the true cost of workloads across every environment with clarity.",
+    "frameImage": "/Rectangle 65.png",
+    "buttons": {
+      "contact": "Contact Us",
+      "demo": "Get a Demo"
+    },
     "cards": [
       {
         "icon": "/workload.png",
@@ -75,7 +86,7 @@
     ]
   },
 
-  "Services": {
+  "services": {
     "title": "Explore Our Services",
     "cards": [
       {
@@ -134,5 +145,72 @@
         "description": "Set spending limits and get alerts when close to thresholds"
       }
     ]
+  },
+  "demo": {
+    "heading": "NO RISK PROOF OF VALUE",
+    "title": "Start controlling your AI and Hybrid Environment Costs.",
+    "description": "Monitor every expense across cloud, on-premise systems, AI and SaaS through a single platform. Avoid unexpected costs with real-time cost distribution, anomaly monitoring and predictive forecasting. Streamline cost management using chargebacks, spending guardrails, and AI-powered insights.",
+    "form": {
+      "title": "Request a Demo",
+      "name": "Name",
+      "email": "E-Mail",
+      "organization": "Organization Name",
+      "source": "How you Know about us?",
+      "submit": "Submit"
+    }
+  },
+
+   "koreValue": {
+    "services": {
+      "title": "Services",
+      "left": [
+        "Cost Analyzer",
+        "Category Views",
+        "K8s Cost Observability",
+        "Recommendations",
+        "Anomaly Detection",
+        "Budgeting"
+      ],
+      "right": [
+        "Reporting",
+        "Virtual Tags",
+        "Cost Allocation",
+        "Unit Economics",
+        "Forecasting"
+      ]
+    },
+    "resource": {
+      "title": "Resource",
+      "items": [
+        "Blogs",
+        "E-Books",
+        "Release Notes"
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "items": [
+        "About Us",
+        "Customers",
+        "Governance",
+        "Privacy Policy",
+        "Terms of Use",
+        "Security"
+      ]
+    },
+    "platform": {
+      "title": "Platform",
+      "items": [
+        "AI Cost Management",
+        "Cost-to-Save",
+        "Cost-to-Outcomes",
+        "Hybrid Cloud Cost Management",
+        "GPU Chargeback",
+        "Kubernetes Cost Management",
+        "Tier 2 Azure"
+      ]
+    },
+    "followText": "Follow us on",
+    "copyright": "© 2026 KoreValue AI-Powered Cloud Intelligence Platform"
   }
 }

@@ -1,0 +1,82 @@
+import content from "../../content/combined.json";
+import ServiceCard from "../ui/ServiceCard";
+
+type Service = {
+  icon?: string;
+  iconType?: string;
+  title: string;
+  description: string;
+};
+
+const ServicesSection = () => {
+
+  // ✅ FIXED: access cards array correctly
+  const services: Service[] = content.services.cards;
+
+  return (
+    <section className="w-full flex justify-center px-4 min-h-screen">
+
+      <div className="w-full max-w-[1400px]">
+
+        {/* TITLE (dynamic from JSON) */}
+        <h2 className="
+          text-white 
+          text-[32px] 
+          sm:text-[40px] 
+          lg:text-[55px] 
+          font-semibold 
+          text-center 
+          mt-[60px] 
+          mb-[80px]
+        ">
+          {content.services.title}
+        </h2>
+
+        {/* ROWS */}
+        <div className="flex flex-col gap-8">
+
+          {/* ROW 1 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
+            {services.slice(0, 4).map((item, index) => (
+              <ServiceCard
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+
+          {/* ROW 2 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
+            {services.slice(4, 8).map((item, index) => (
+              <ServiceCard
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+
+          {/* ROW 3 */}
+          <div className="flex justify-center gap-6 flex-wrap">
+            {services.slice(8, 11).map((item, index) => (
+              <ServiceCard
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+};
+
+export default ServicesSection;

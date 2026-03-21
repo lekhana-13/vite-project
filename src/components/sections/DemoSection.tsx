@@ -2,7 +2,7 @@
 import content from "../../content/combined.json";
 
 export default function DemoSection() {
-  const demo = content.Demo;
+  const demo = content.demo;
 
   const scrollToTop = () => {
     window.scrollTo({

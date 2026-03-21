@@ -1,38 +1,137 @@
 import content from "../../content/combined.json";
 
 export default function KoreValueSection() {
-  const footer = content.Footer;
+  const data = content.koreValue;
+
   return (
-    <section
-      className="
-      w-full
-      flex
-      justify-center
-      py-16
-      "
-    >
+    <section className="w-full flex justify-center overflow-hidden">
 
-      <div className="w-[1728px] h-[545px] flex items-center justify-center">
+      <div className="w-full flex justify-center">
 
-        <div className="text-center max-w-[900px]">
+        <div
+          style={{
+            transform: `scale(${
+              typeof window !== "undefined"
+                ? Math.min(window.innerWidth / 1728, 1)
+                : 1
+            })`,
+            transformOrigin: "top center"
+          }}
+        >
 
-          <img
-            src="/KV Logo White 1.png"
-            alt="Kore Value"
-            className="mx-auto mb-6 w-[360px]"
-          />
+          <div className="relative w-[1728px] h-[650px]">
 
-          <p className="text-[#BDBDBD] text-[16px] mb-10">
-            {footer.tagline}
-          </p>
+            {/* LOGO */}
+            <img
+              src="/KV Logo White 1.png"
+              alt="logo"
+              className="absolute"
+              style={{
+                width: "392px",
+                height: "73px",
+                top: "43px",
+                left: "74px"
+              }}
+            />
 
-          <p className="text-[#9E9E9E] text-[15px] leading-[28px] max-w-[760px] mx-auto">
-            {footer.description}
-          </p>
+            {/* SERVICES */}
+            <div className="absolute" style={{ top: "133px", left: "74px" }}>
+              <h3 className="text-[#77B900] text-[32px] font-medium">
+                {data.services.title}
+              </h3>
 
-          <p className="text-[#6F6F6F] text-[12px] mt-[80px]">
-            {footer.copyright}
-          </p>
+              <div className="text-[#7E7E7E] text-[18px] mt-4 leading-[32px]">
+                {data.services.left.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+              </div>
+
+              <div className="absolute left-[240px] top-[48px] text-[#7E7E7E] text-[18px] leading-[32px]">
+                {data.services.right.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* RESOURCE */}
+            <div className="absolute" style={{ top: "133px", left: "577px" }}>
+              <h3 className="text-[#77B900] text-[32px] font-medium">
+                {data.resource.title}
+              </h3>
+
+              <div className="text-[#7E7E7E] text-[18px] mt-4 leading-[32px]">
+                {data.resource.items.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* COMPANY */}
+            <div className="absolute" style={{ top: "125px", left: "791px" }}>
+              <h3 className="text-[#77B900] text-[32px] font-medium">
+                {data.company.title}
+              </h3>
+
+              <div className="text-[#7E7E7E] text-[18px] mt-4 leading-[32px]">
+                {data.company.items.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* PLATFORM */}
+            <div className="absolute" style={{ top: "125px", left: "1016px" }}>
+              <h3 className="text-[#77B900] text-[32px] font-medium">
+                {data.platform.title}
+              </h3>
+
+              <div className="text-[#7E7E7E] text-[18px] mt-4 leading-[32px]">
+                {data.platform.items.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* VECTOR LINE */}
+            <div
+              className="absolute w-[1728px] border-t-[3px] border-[#77B900]"
+              style={{ top: "650px" }}
+            />
+
+            {/* FOLLOW */}
+            <div
+              className="absolute text-[#77B900] text-[22px]"
+              style={{ top: "680px", left: "74px" }}
+            >
+              {data.followText}
+            </div>
+
+            {/* ICONS */}
+            <img
+              src="/Insta.png"
+              className="absolute"
+              style={{ top: "684px", left: "229px", width: "20px" }}
+            />
+            <img
+              src="/Linkedin.png"
+              className="absolute"
+              style={{ top: "685px", left: "273px", width: "20px" }}
+            />
+            <img
+              src="/Twitter.png"
+              className="absolute"
+              style={{ top: "686px", left: "313px", width: "22px" }}
+            />
+
+            {/* COPYRIGHT */}
+            <div
+              className="absolute text-center w-full text-[#7E7E7E] text-[14px]"
+              style={{ top: "730px" }}
+            >
+              {data.copyright}
+            </div>
+
+          </div>
 
         </div>
 
