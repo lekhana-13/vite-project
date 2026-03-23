@@ -88,3 +88,34 @@ html{
 .laptop-float{
   animation:laptopFloat 6s ease-in-out infinite;
 }
+/* FLOWING LINE 1 */
+.line-flow {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: flowLine 3s linear infinite;
+}
+
+@keyframes flowLine {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* FLOWING LINE 2 */
+.line-flow2 {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: flowLine2 3s linear infinite;
+}
+
+@keyframes flowLine2 {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

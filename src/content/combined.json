@@ -15,31 +15,37 @@
   "Infrastructure": {
     "cards": [
       {
+        "id": 1,
         "title": "FinOps Autopilot",
-        "description": "AI Agents that simplify cloud cost management across stake holders",
-        "cardTop": 100,
-        "titleTop": 200,
-        "descTop": 300,
-        "width": "auto",
-        "descWidth": "684px"
+        "description": "AI Agents that simplify cloud cost management across stakeholders",
+        "cardTop": 120,
+        "titleTop": 120,
+        "descTop": 200,
+        "width": "750px",
+        "descWidth": "750px",
+        "image": "/finops.png"
       },
       {
+        "id": 2,
         "title": "Brings clarity and Control to AI Spend",
         "description": "AI cost can be unpredictable and complex, our AI financial management will be predictable",
-        "cardTop": 600,
-        "titleTop": 650,
-        "descTop": 850,
-        "width": "581px",
-        "descWidth": "653px"
+        "cardTop": 520,
+        "titleTop": 520,
+        "descTop": 620,
+        "width": "750px",
+        "descWidth": "750px",
+        "image": "/spend.png"
       },
       {
+        "id": 3,
         "title": "Autonomous K8s and GPU Resource Optimization",
         "description": "The most powerful Agentic Platform for automated resource optimization",
-        "cardTop": 1100,
-        "titleTop": 1150,
-        "descTop": 1350,
-        "width": "827px",
-        "descWidth": "766px"
+        "cardTop": 920,
+        "titleTop": 920,
+        "descTop": 1020,
+        "width": "750px",
+        "descWidth": "750px",
+        "image": "/k8s.png"
       }
     ]
   },
@@ -146,6 +152,7 @@
       }
     ]
   },
+
   "demo": {
     "heading": "NO RISK PROOF OF VALUE",
     "title": "Start controlling your AI and Hybrid Environment Costs.",
@@ -160,7 +167,7 @@
     }
   },
 
-   "koreValue": {
+  "koreValue": {
     "services": {
       "title": "Services",
       "left": [
@@ -181,11 +188,7 @@
     },
     "resource": {
       "title": "Resource",
-      "items": [
-        "Blogs",
-        "E-Books",
-        "Release Notes"
-      ]
+      "items": ["Blogs", "E-Books", "Release Notes"]
     },
     "company": {
       "title": "Company",
