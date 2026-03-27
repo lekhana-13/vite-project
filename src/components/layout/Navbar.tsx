@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import content from "../../content/combined.json";
 import { Link, useLocation } from "react-router-dom";
 
@@ -21,6 +21,20 @@ const Navbar = () => {
   const resources = navbar.resourcesDropdown || [];
   const platformItems = content.Ctrls?.platform?.items || [];
   const companyItems = navbar.companyDropdown || [];
+
+  // ✅ FIXED TIMEOUT USING REF
+  const timeoutRef = useRef<any>(null);
+
+  const handleEnter = (setState: any) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setState(true);
+  };
+
+  const handleLeave = (setState: any) => {
+    timeoutRef.current = setTimeout(() => {
+      setState(false);
+    }, 200);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,14 +122,13 @@ const Navbar = () => {
                     </div>
                   );
 
-                  // 🔥 RESOURCES DROPDOWN
                   if (item === "Resources") {
                     return (
                       <div
                         key={index}
                         className="relative"
-                        onMouseEnter={() => setShowResources(true)}
-                        onMouseLeave={() => setShowResources(false)}
+                        onMouseEnter={() => handleEnter(setShowResources)}
+                        onMouseLeave={() => handleLeave(setShowResources)}
                       >
                         {MenuItem}
 
@@ -126,7 +139,7 @@ const Navbar = () => {
                                 <div className="grid grid-cols-2 gap-10">
                                   {resources.map((res, i) => (
                                     <Link key={i} to={res.path}>
-                                      <div>
+                                      <div className="hover:bg-[#77B900]/10 p-2 rounded-lg transition">
                                         <p className="text-[#9fdc00] text-[18px] font-semibold">
                                           {res.title}
                                         </p>
@@ -145,14 +158,13 @@ const Navbar = () => {
                     );
                   }
 
-                  // 🔥 PLATFORM DROPDOWN
                   if (item === "Platform") {
                     return (
                       <div
                         key={index}
                         className="relative"
-                        onMouseEnter={() => setShowPlatform(true)}
-                        onMouseLeave={() => setShowPlatform(false)}
+                        onMouseEnter={() => handleEnter(setShowPlatform)}
+                        onMouseLeave={() => handleLeave(setShowPlatform)}
                       >
                         {MenuItem}
 
@@ -161,7 +173,7 @@ const Navbar = () => {
                             <div className="p-[2px] rounded-[22px] bg-gradient-to-br from-[#0F1800] to-[#77B900]">
                               <div className="w-[280px] bg-[#0F1800] rounded-[20px] p-4">
                                 {platformItems.map((p, i) => (
-                                  <div key={i} className="py-2 text-white/80 hover:text-[#9fdc00]">
+                                  <div key={i} className="py-2 px-2 rounded-lg text-white/80 hover:text-[#9fdc00] hover:bg-[#77B900]/10 transition">
                                     {p}
                                   </div>
                                 ))}
@@ -173,14 +185,13 @@ const Navbar = () => {
                     );
                   }
 
-                  // 🔥 COMPANY DROPDOWN
                   if (item === "Company") {
                     return (
                       <div
                         key={index}
                         className="relative"
-                        onMouseEnter={() => setShowCompany(true)}
-                        onMouseLeave={() => setShowCompany(false)}
+                        onMouseEnter={() => handleEnter(setShowCompany)}
+                        onMouseLeave={() => handleLeave(setShowCompany)}
                       >
                         {MenuItem}
 
@@ -190,7 +201,7 @@ const Navbar = () => {
                               <div className="w-[240px] bg-[#0F1800] rounded-[20px] p-4">
                                 {companyItems.map((c, i) => (
                                   <Link key={i} to={c.path}>
-                                    <div className="py-2 text-white/80 hover:text-[#9fdc00]">
+                                    <div className="py-2 px-2 rounded-lg text-white/80 hover:text-[#9fdc00] hover:bg-[#77B900]/10 transition">
                                       {c.title}
                                     </div>
                                   </Link>
@@ -225,10 +236,10 @@ const Navbar = () => {
                 {showGetStarted && (
                   <div className="absolute right-0 mt-3 w-[200px] bg-[#0F1800] border border-[#77B900] rounded-[14px] p-3">
                     <div className="flex flex-col gap-2">
-                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900]">Sign in</div>
-                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900]">Sign up</div>
-                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900]">Get Demo</div>
-                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900]">Connect Us</div>
+                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900] hover:bg-[#77B900]/10 hover:text-[#9fdc00] cursor-pointer transition">Sign in</div>
+                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900] hover:bg-[#77B900]/10 hover:text-[#9fdc00] cursor-pointer transition">Sign up</div>
+                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900] hover:bg-[#77B900]/10 hover:text-[#9fdc00] cursor-pointer transition">Get Demo</div>
+                      <div className="px-3 py-2 border border-[#436900] rounded-lg text-[#77B900] hover:bg-[#77B900]/10 hover:text-[#9fdc00] cursor-pointer transition">Connect Us</div>
                     </div>
                   </div>
                 )}
@@ -244,6 +255,85 @@ const Navbar = () => {
 
           </div>
         </div>
+
+        {/* ✅ MOBILE MENU ADDED */}
+        {menuOpen && (
+          <div className="lg:hidden w-full bg-[#0F1800] flex flex-col gap-4 py-6 px-4 border-t border-[#436900]">
+
+            {menuOrder.map((item, index) => {
+              const path = getPath(item);
+
+              if (item === "Resources") {
+                return (
+                  <div key={index}>
+                    <button onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)} className="w-full flex justify-between text-[#77B900]">
+                      Resources
+                      <span>{mobileResourcesOpen ? "−" : "⌄"}</span>
+                    </button>
+
+                    {mobileResourcesOpen && (
+                      <div className="ml-3 mt-2">
+                        {resources.map((res, i) => (
+                          <Link key={i} to={res.path}>
+                            <div className="text-white/70 text-sm">{res.title}</div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              if (item === "Platform") {
+                return (
+                  <div key={index}>
+                    <button onClick={() => setMobilePlatformOpen(!mobilePlatformOpen)} className="w-full flex justify-between text-[#77B900]">
+                      Platform
+                      <span>{mobilePlatformOpen ? "−" : "⌄"}</span>
+                    </button>
+
+                    {mobilePlatformOpen && (
+                      <div className="ml-3 mt-2">
+                        {platformItems.map((p, i) => (
+                          <div key={i} className="text-white/70 text-sm">{p}</div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              if (item === "Company") {
+                return (
+                  <div key={index}>
+                    <button onClick={() => setMobileCompanyOpen(!mobileCompanyOpen)} className="w-full flex justify-between text-[#77B900]">
+                      Company
+                      <span>{mobileCompanyOpen ? "−" : "⌄"}</span>
+                    </button>
+
+                    {mobileCompanyOpen && (
+                      <div className="ml-3 mt-2">
+                        {companyItems.map((c, i) => (
+                          <Link key={i} to={c.path}>
+                            <div className="text-white/70 text-sm">{c.title}</div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link key={index} to={path} className="text-[#77B900]">
+                  {item}
+                </Link>
+              );
+            })}
+
+          </div>
+        )}
+
       </div>
     </nav>
   );

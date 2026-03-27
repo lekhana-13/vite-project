@@ -1,63 +1,69 @@
 {
-"Navbar": {
+  "Navbar": {
 
-  "menu": ["Home", "Services", "Resources", "Platform", "Company" ,"Pricing"],
+    "menu": ["Home", "Services", "Resources", "Platform", "Company" ,"Pricing"],
 
-  "buttons": {
-    "contact": "Connect Us",
-    "getdemo": "Get Demo"
+    "buttons": {
+      "contact": "Connect Us",
+      "getdemo": "Get Demo"
+    },
+
+    "resourcesDropdown": [
+      {
+        "title": "Blogs",
+        "desc": "Latest insights and updates",
+        "path": "/resources/blogs"
+      },
+      {
+        "title": "E-Books",
+        "desc": "Download in-depth guides",
+        "path": "/resources/ebooks"
+      },
+      {
+        "title": "Release Notes",
+        "desc": "Track product updates",
+        "path": "/resources/releases"
+      }
+    ],
+
+    
+    "platformDropdown": [
+      { "title": "AI Cost Management" },
+      { "title": "Cost-to-Save" },
+      { "title": "Cost-to-Outcomes" },
+      { "title": "Hybrid Cloud Cost Management" },
+      { "title": "GPU Chargeback" },
+      { "title": "Kubernetes Cost Management" },
+      { "title": "Tier 2 Azure" }
+    ],
+
+    "companyDropdown": [
+      {
+        "title": "About Us",
+        "path": "/company/about"
+      },
+      {
+        "title": "Customers",
+        "path": "/company/customers"
+      },
+      {
+        "title": "Governance",
+        "path": "/company/governance"
+      },
+      {
+        "title": "Privacy Policy",
+        "path": "/company/privacy"
+      },
+      {
+        "title": "Terms of Use",
+        "path": "/company/terms"
+      },
+      {
+        "title": "Security",
+        "path": "/company/security"
+      }
+    ]
   },
-
-  "resourcesDropdown": [
-    {
-      "title": "Blogs",
-      "desc": "Latest insights and updates",
-      "path": "/resources/blogs"
-    },
-    {
-      "title": "E-Books",
-      "desc": "Download in-depth guides",
-      "path": "/resources/ebooks"
-    },
-    {
-      "title": "Release Notes",
-      "desc": "Track product updates",
-      "path": "/resources/releases"
-    },
-    {
-      "title": "Case Studies",
-      "desc": "Real-world success stories",
-      "path": "/resources/case-studies"
-    }
-  ],
-
-  "companyDropdown": [
-    {
-      "title": "About Us",
-      "path": "/company/about"
-    },
-    {
-      "title": "Customers",
-      "path": "/company/customers"
-    },
-    {
-      "title": "Governance",
-      "path": "/company/governance"
-    },
-    {
-      "title": "Privacy Policy",
-      "path": "/company/privacy"
-    },
-    {
-      "title": "Terms of Use",
-      "path": "/company/terms"
-    },
-    {
-      "title": "Security",
-      "path": "/company/security"
-    }
-  ]
-},
 
   "Hero": {
     "title": "A Single Solution to Manage AI and Hybrid Infrastructure costs",
