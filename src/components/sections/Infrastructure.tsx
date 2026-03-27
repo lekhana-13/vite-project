@@ -49,27 +49,37 @@ export default function Infrastructure() {
                 bg-[linear-gradient(135deg,#0F1800,#77B900)]
               ">
 
+                {/* 🔥 FIX START */}
                 <div className="
                   w-full h-auto
                   rounded-[25px] sm:rounded-[30px] lg:rounded-[63px]
                   bg-[#131814]
                   p-3 sm:p-4 md:p-6
                   flex flex-col justify-start
-                  overflow-visible
+
+                  overflow-hidden   /* ✅ prevent outside overflow */
                 ">
 
                   {/* CHART */}
-                  <div className="w-full h-auto">
-                    {index === 0 ? (
-                      <FinOpsChart />
-                    ) : index === 1 ? (
-                      <SpendChart />
-                    ) : index === 2 ? (
-                      <Graph />
-                    ) : null}
+                  <div className="w-full h-auto overflow-hidden">
+
+                    {/* 🔥 FIX: force chart to fit container */}
+                    <div className="w-full max-w-full overflow-hidden">
+
+                      {index === 0 ? (
+                        <FinOpsChart />
+                      ) : index === 1 ? (
+                        <SpendChart />
+                      ) : index === 2 ? (
+                        <Graph />
+                      ) : null}
+
+                    </div>
+
                   </div>
 
                 </div>
+                {/* 🔥 FIX END */}
 
               </div>
 
