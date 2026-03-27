@@ -160,7 +160,7 @@ export default function KubexChart() {
               transition={{ duration: 2, repeat: Infinity }}
             />
             <span className="font-mono font-semibold text-lg text-foreground">
-              KoreValue
+              Ctrls
             </span>
           </div>
           <div className="text-right">

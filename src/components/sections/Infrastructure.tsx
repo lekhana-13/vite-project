@@ -1,75 +1,85 @@
 import content from "../../content/combined.json";
-import KubexChart from "../ui/KubexChart";
-
-type Card = {
-  title: string;
-  description: string;
-};
+import Graph from "./KubexChart";
+import FinOpsChart from "./FinopsCharts";
+import SpendChart from "./SpendChart";
 
 export default function Infrastructure() {
-  const cards: Card[] = content.Infrastructure.cards;
-
-  const images = ["/finops.png", "/spend.png"];
+  const cards = content.Infrastructure.cards;
 
   return (
-    <section className="w-full flex justify-center py-16 md:py-32 bg-transparent relative z-10 px-4">
+    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-10 pt-0 pb-12 sm:pb-16 lg:pb-24 -mt-[140px] sm:-mt-[180px] lg:-mt-[220px]">
 
-      <div className="w-full max-w-[1400px] flex flex-col gap-20 md:gap-40">
+      <div className="w-full max-w-[1400px]">
 
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-32"
+            className="
+              grid grid-cols-1 lg:grid-cols-2
+              items-center
+              gap-8 sm:gap-10 lg:gap-20
+              mb-16 sm:mb-20 lg:mb-32
+            "
           >
 
-            {/* LEFT TEXT */}
-            <div className="w-full md:w-[50%] text-center md:text-left">
-              <h3 className="text-white text-3xl md:text-[64px] font-semibold leading-tight md:leading-[1.05] mb-4 md:mb-6">
+            {/* LEFT */}
+            <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 text-center lg:text-left">
+
+              <h3 className="text-white text-[22px] sm:text-[28px] md:text-[40px] lg:text-[56px] font-semibold leading-tight">
                 {card.title}
               </h3>
 
-              <p className="text-[#8A8A8A] text-base md:text-[26px] leading-relaxed md:leading-[1.6] max-w-full md:max-w-[600px] mx-auto md:mx-0">
+              <p className="text-[#7E7E7E] text-[14px] sm:text-[16px] md:text-[22px] lg:text-[28px] leading-relaxed max-w-full lg:max-w-[600px] mx-auto lg:mx-0">
                 {card.description}
               </p>
+
             </div>
 
             {/* RIGHT CARD */}
-            <div className="
-              w-full md:w-[640px]
-              h-[220px] md:h-[360px]
-              rounded-[32px] md:rounded-[48px]
-              p-[2px]
-              bg-[linear-gradient(135deg,#0F1800,#77B900)]
-              shadow-[0_0_40px_rgba(119,185,0,0.2)] md:shadow-[0_0_80px_rgba(119,185,0,0.25)]
-            ">
+            <div className="flex justify-center lg:justify-end">
 
               <div className="
-                w-full h-full 
-                bg-[#0E1411] 
-                rounded-[30px] md:rounded-[46px] 
-                overflow-hidden
-                flex items-center justify-center
+                w-full
+                max-w-[100%] sm:max-w-[500px] lg:max-w-[700px]
+
+                min-h-[220px] sm:min-h-[260px] md:min-h-[300px] lg:min-h-[340px]
+
+                rounded-[30px] sm:rounded-[40px] lg:rounded-[63px]
+                p-[2px]
+                bg-[linear-gradient(135deg,#0F1800,#77B900)]
               ">
 
-                {index === 2 ? (
-                  <div className="w-full h-full flex items-center justify-center p-2 md:p-4">
-                    <KubexChart />
+                <div className="
+                  w-full h-auto
+                  rounded-[25px] sm:rounded-[30px] lg:rounded-[63px]
+                  bg-[#131814]
+                  p-3 sm:p-4 md:p-6
+                  flex flex-col justify-start
+                  overflow-visible
+                ">
+
+                  {/* CHART */}
+                  <div className="w-full h-auto">
+                    {index === 0 ? (
+                      <FinOpsChart />
+                    ) : index === 1 ? (
+                      <SpendChart />
+                    ) : index === 2 ? (
+                      <Graph />
+                    ) : null}
                   </div>
-                ) : (
-                  <img
-                    src={images[index]}
-                    alt={card.title}
-                    className="w-full h-full object-contain md:object-cover p-4 md:p-0"
-                  />
-                )}
+
+                </div>
 
               </div>
+
             </div>
 
           </div>
         ))}
 
       </div>
+
     </section>
   );
 }

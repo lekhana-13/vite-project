@@ -7,7 +7,7 @@ import Hero from "./components/sections/Hero";
 import Infrastructure from "./components/sections/Infrastructure";
 import VisibilitySection from "./components/sections/VisibilitySection";
 import DemoSection from "./components/sections/DemoSection";
-import KoreValueSection from "./components/sections/KoreValueSection";
+import KoreValueSection from "./components/sections/Ctrls";
 import ServicesSection from "./components/sections/ServicesSection";
 
 function App() {

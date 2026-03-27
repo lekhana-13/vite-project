@@ -1,11 +1,63 @@
 {
-  "Navbar": {
-    "menu": ["Home", "Services", "Platform", "Resources"],
-    "buttons": {
-      "contact": "Contact Us",
-      "login": "Login"
-    }
+"Navbar": {
+
+  "menu": ["Home", "Services", "Resources", "Platform", "Company" ,"Pricing"],
+
+  "buttons": {
+    "contact": "Connect Us",
+    "getdemo": "Get Demo"
   },
+
+  "resourcesDropdown": [
+    {
+      "title": "Blogs",
+      "desc": "Latest insights and updates",
+      "path": "/resources/blogs"
+    },
+    {
+      "title": "E-Books",
+      "desc": "Download in-depth guides",
+      "path": "/resources/ebooks"
+    },
+    {
+      "title": "Release Notes",
+      "desc": "Track product updates",
+      "path": "/resources/releases"
+    },
+    {
+      "title": "Case Studies",
+      "desc": "Real-world success stories",
+      "path": "/resources/case-studies"
+    }
+  ],
+
+  "companyDropdown": [
+    {
+      "title": "About Us",
+      "path": "/company/about"
+    },
+    {
+      "title": "Customers",
+      "path": "/company/customers"
+    },
+    {
+      "title": "Governance",
+      "path": "/company/governance"
+    },
+    {
+      "title": "Privacy Policy",
+      "path": "/company/privacy"
+    },
+    {
+      "title": "Terms of Use",
+      "path": "/company/terms"
+    },
+    {
+      "title": "Security",
+      "path": "/company/security"
+    }
+  ]
+},
 
   "Hero": {
     "title": "A Single Solution to Manage AI and Hybrid Infrastructure costs",
@@ -67,7 +119,7 @@
       {
         "icon": "/container.png",
         "title": "Handle Complex Shared Resources",
-        "description": "Allocate costs across Kubernetes clusters, shared databases, and multi-tenant infrastructure effortlessly with KoreValue’s intelligent allocation engine."
+        "description": "Allocate costs across Kubernetes clusters, shared databases, and multi-tenant infrastructure effortlessly with Ctrls intelligent allocation engine."
       },
       {
         "icon": "/cloud.png",
@@ -167,7 +219,7 @@
     }
   },
 
-  "koreValue": {
+  "Ctrls": {
     "services": {
       "title": "Services",
       "left": [
@@ -214,6 +266,6 @@
       ]
     },
     "followText": "Follow us on",
-    "copyright": "© 2026 KoreValue AI-Powered Cloud Intelligence Platform"
+    "copyright": "© 2026 Ctrls AI-Powered Cloud Intelligence Platform"
   }
 }
