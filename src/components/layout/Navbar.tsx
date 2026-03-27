@@ -77,7 +77,7 @@ const Navbar = () => {
             <div className="flex justify-start">
               <Link to="/" className="flex items-center justify-center">
                 <img
-                  src="/CtrlS.png"
+                  src="/Ctrls Logo.png"
                   alt="logo"
                   className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] object-contain"
                 />
